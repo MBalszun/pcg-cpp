@@ -481,7 +481,7 @@ public:
         }
     }
 
-    engine(itype state = itype(0xcafef00dd15ea5e5ULL))
+    constexpr engine(itype state = itype(0xcafef00dd15ea5e5ULL))
         : state_(this->is_mcg ? state|state_type(3U)
                               : bump(state + this->increment()))
     {
